@@ -1,0 +1,47 @@
+{
+  "name": "laravel-mix-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "production": "mix --production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.9",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^10.2.4",
+    "filename-regex": "^2.0.1",
+    "http-proxy-middleware": "^2.0.6",
+    "laravel-mix": "^6.0.43",
+    "laravel-mix-clean": "^0.1.0",
+    "laravel-mix-svg-sprite": "^2.0.0",
+    "laravel-mix-webp": "^0.1.3",
+    "mix-html-builder": "^0.8.0",
+    "mix-tailwindcss": "^1.3.0",
+    "postcss-custom-properties": "^13.1.5",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.3.0",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.50.1",
+    "sass-loader": "^12.1.0",
+    "tailwindcss": "^3.3.2",
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.7.13"
+  },
+  "dependencies": {
+    "@vueuse/core": "^10.1.2",
+    "axios": "^1.4.0",
+    "vue": "^2.6.12",
+    "vue-agile": "^2.0.0",
+    "inputmask": "^5.0.7",
+    "moment": "^2.29.4"  
+  }
+}

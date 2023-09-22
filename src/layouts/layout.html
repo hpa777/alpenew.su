@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body class="font-main">
+        <div id="vue-app" class="relative grid h-screen grid-rows-layout">
+            <header class="container flex items-end justify-between pb-2 pt-3 md:items-center md:pt-8">
+                <a class="w-32 shrink-0" href="">
+                    <img src="img/logo.png" alt="" />
+                </a>
+                <nav>
+                    <button id="mobile-menu-btn" class="md:hidden">
+                        <svg width="53" height="37" viewBox="0 0 53 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0H53V4.08889H0V0Z" fill="#DA251C" />
+                            <path d="M0 32.7114H53V36.8003H0V32.7114Z" fill="#DA251C" />
+                            <path d="M0 16.3555H53V20.4444H0V16.3555Z" fill="#DA251C" />
+                        </svg>
+                    </button>
+                    <div id="main-menu" class="fixed left-0 top-0 z-10 hidden h-full w-full bg-slate-300/70 max-sm:backdrop-blur-sm md:static md:block md:bg-transparent">
+                        <button id="mobile-menu-close-btn" class="absolute right-8 top-9 md:hidden">
+                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 1.42255L12.59 0L7 5.63976L1.41 0L0 1.42255L5.59 7.06231L0 12.7021L1.41 14.1246L7 8.48487L12.59 14.1246L14 12.7021L8.41 7.06231L14 1.42255Z" fill="#1E2640" />
+                            </svg>
+                        </button>
+                        <ul class="float-right h-full w-[90%] flex-wrap bg-white pt-16 text-base max-sm:px-9 md:float-none md:flex md:w-auto md:bg-transparent md:pl-0 md:pt-4 lg:pr-[73px]">
+                            <li class="main-menu__item active relative md:ml-7">
+                                <a href="" class="hover:text-alpen_red">Главная</a>
+                            </li>
+                            <li class="main-menu__item relative md:ml-7">
+                                <a href="" class="hover:text-alpen_red">
+                                    <span>О компании</span>
+                                    <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block h-3 w-3">
+                                        <path d="M6 9L0.803849 -9.78799e-07L11.1962 -7.02746e-08L6 9Z" fill="currentColor" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="main-menu__item relative md:ml-7">
+                                <a href="" class="hover:text-alpen_red">
+                                    Продукты
+                                    <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block h-3 w-3">
+                                        <path d="M6 9L0.803849 -9.78799e-07L11.1962 -7.02746e-08L6 9Z" fill="currentColor" />
+                                    </svg>
+                                </a>
+                                <div class="sub-menu left-0 top-6 z-10 overflow-hidden md:absolute">
+                                    <ul class="bg-white md:rounded-b-lg md:px-6 md:pb-6 md:pt-3">
+                                        <li>
+                                            <a class="sub-menu__link" href="">Здоровье</a>
+                                            <ul class="pl-7">
+                                                <li class="sub-menu__li">
+                                                    <a class="sub-menu__link" href="">Противопростудные препараты</a>
+                                                </li>
+                                                <li class="sub-menu__li">
+                                                    <a class="sub-menu__link" href="">Женское здоровье</a>
+                                                </li>
+                                                <li class="sub-menu__li">
+                                                    <a class="sub-menu__link" href="">Детская серия</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="sub-menu__link" href="">Красота</a></li>
+                                        <li><a class="sub-menu__link" href="">По алфавиту</a></li>
+                                        <li>
+                                            <a class="sub-menu__link" href="">По проблематике</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="main-menu__item relative md:ml-7">
+                                <a href="" class="hover:text-alpen_red">Партнёрство</a>
+                            </li>
+                            <li class="main-menu__item relative md:ml-7">
+                                <a href="" class="hover:text-alpen_red">Карьера</a>
+                            </li>
+                            <li class="main-menu__item relative md:ml-7">
+                                <a href="" class="hover:text-alpen_red">Вакансии</a>
+                            </li>
+                            <li class="main-menu__item relative md:ml-7">
+                                <a href="" class="hover:text-alpen_red">Контакты</a>
+                            </li>
+                            <li class="main-menu__item relative md:ml-7">
+                                <a href="" class="hover:text-alpen_red">Фармаконадзор</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+
+            <main>
+                <block name="content"></block>
+            </main>
+
+            <!-- footer -->
+            <footer class="container mt-8 pb-8 md:mt-28 md:pb-14">
+                <div class="relative md:flex md:justify-between">
+                    <div class="mb-8 w-1/2 md:w-96 lg:w-1/4 lg:pt-4">
+                        <a class="block md:w-32 lg:w-[16.8rem]" href="">
+                            <img class="object-contain" src="img/logo_max.png" alt="" />
+                        </a>
+                    </div>
+                    <div class="md:w-1/4">
+                        <div class="bottom-0 left-0 mb-8 md:absolute md:mb-0 lg:static lg:mb-11 lg:pt-2">
+                            <div class="mb-[0.8rem]">
+                                <a class="text-xl lg:text-sm" href="">
+                                    <svg class="mr-1 inline-block h-4 w-4" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.14525 10.062C6.95205 11.7281 8.29928 13.0718 9.96744 13.8743C10.0905 13.9326 10.2266 13.9578 10.3624 13.9475C10.4981 13.9372 10.6288 13.8917 10.7417 13.8155L13.1918 12.1789C13.3001 12.1054 13.4251 12.0606 13.5554 12.0486C13.6856 12.0367 13.8168 12.0578 13.9366 12.1103L18.5233 14.0802C18.68 14.1454 18.811 14.2604 18.896 14.4074C18.981 14.5543 19.0153 14.7252 18.9937 14.8936C18.8483 16.0282 18.2945 17.071 17.4358 17.8269C16.5772 18.5827 15.4726 18.9997 14.3287 19C10.7937 19 7.40348 17.5957 4.90387 15.0961C2.40427 12.5965 1 9.20632 1 5.67134C1.00026 4.52743 1.41732 3.4228 2.17314 2.56415C2.92897 1.70551 3.97176 1.15168 5.1064 1.00631C5.27481 0.984678 5.44566 1.01901 5.59265 1.10401C5.73963 1.18901 5.8546 1.31998 5.91984 1.47673L7.88974 6.07316C7.94097 6.19111 7.9624 6.31984 7.95214 6.44802C7.94189 6.5762 7.90026 6.6999 7.83094 6.8082L6.19426 9.29752C6.12139 9.41011 6.07862 9.53951 6.07004 9.67335C6.06147 9.80719 6.08736 9.94099 6.14525 10.062V10.062Z"
+                                            stroke="#DA251C"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="hover:underline">+7 495 609 6572</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a class="text-xl lg:text-sm" href="">
+                                    <svg class="mr-1 inline-block h-4 w-4" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M2.66667 1H16C16.9167 1 17.6667 1.75 17.6667 2.66667V12.6667C17.6667 13.5833 16.9167 14.3333 16 14.3333H2.66667C1.75 14.3333 1 13.5833 1 12.6667V2.66667C1 1.75 1.75 1 2.66667 1Z"
+                                            stroke="#DA251C"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M17.6667 2.66797L9.33333 8.5013L1 2.66797" stroke="#DA251C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="hover:underline">info.russia@alpenpharma.com</span>
+                                </a>
+                            </div>
+                        </div>
+                        <ul>
+                            <li class="mb-6 block md:mb-7">
+                                <a class="text-xl font-semibold text-alpen_blue" href="">О компании</a>
+                                <ul class="mt-6 text-2xl md:mt-10 lg:mt-1 lg:text-sm">
+                                    <li>
+                                        <a class="sub-menu__link" href="">События</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mb-6 block md:mb-10">
+                                <a class="text-xl font-semibold text-alpen_blue" href="">Партнерство</a>
+                            </li>
+                            <li class="hidden md:block lg:hidden">
+                                <a class="text-2xl font-semibold text-alpen_blue" href="">Продукты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:hidden lg:block lg:w-1/4 lg:pl-10">
+                        <ul>
+                            <li class="mb-6 block">
+                                <a class="text-xl font-semibold text-alpen_blue" href="">Продукты</a>
+                                <ul class="mt-4 hidden text-sm md:block">
+                                    <li class="">
+                                        <a class="sub-menu__link" href="">Здоровье</a>
+                                        <ul class="mt-2 pl-7">
+                                            <li class="sub-menu__li mb-1">
+                                                <a class="sub-menu__link" href="">Противопростудные препараты</a>
+                                            </li>
+                                            <li class="sub-menu__li mb-1">
+                                                <a class="sub-menu__link" href="">Женское здоровье</a>
+                                            </li>
+                                            <li class="sub-menu__li mb-1">
+                                                <a class="sub-menu__link" href="">Детская серия</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="mb-2"><a class="sub-menu__link" href="">Красота</a></li>
+                                    <li class="mb-2"><a class="sub-menu__link" href="">По алфавиту</a></li>
+                                    <li><a class="sub-menu__link" href="">По проблематике</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:pl-24 lg:w-1/4">
+                        <ul class="text-xl font-semibold text-alpen_blue">
+                            <li class="mb-6 md:mb-9">
+                                <a href="">Карьера</a>
+                            </li>
+                            <li class="mb-6 md:mb-9">
+                                <a href="">Вакансии</a>
+                            </li>
+                            <li class="mb-6 md:mb-9">
+                                <a href="">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="">Фармаконадзор</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

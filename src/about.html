@@ -1,0 +1,61 @@
+<extends src="layout.html">
+    <block name="content">
+        <include src="breadcrumbs.html"> {"page":"Партнёрство"} </include>
+
+        <div class="container">
+            <div class="mb-16 text-5xl font-semibold text-alpen_blue">Партнёрство</div>
+            <div class="text">
+                <p>
+                    Группа компаний «Альпен Фарма» (Alpen Pharma Group) берет свое начало в 1997 году и представляет собой объединение компаний, основным профилем которых является промоционно-дистрибьюторская деятельность,
+                    а также производство и продвижение лекарственных средств.
+                </p>
+                <p>
+                    Сфера ее влияния распространяется на территорию стран Азии, Западной и Восточной Европы. Главный офис находится в столице Швейцарии г. Берн. Каждая из компаний, входящих в группу, относится к ведущим на
+                    фармацевтическом рынке своей страны и предоставляет своим деловым партнерам полный спектр услуг по продвижению и дистрибуции фармацевтических препаратов, включая их регистрацию.
+                </p>
+                <p>
+                    Также одним из важных направлений деятельности группы является организация и проведение клинических исследований лекарственных средств по международным стандартам GCP, которые значительно расширяют
+                    перечень предлагаемых услуг.
+                </p>
+                <img class="mx-auto" src="img/video-term.jpg" alt="" />
+            </div>
+        </div>
+        <div class="relative mt-20">
+            <img class="absolute left-0 top-0 -z-10 h-full w-full object-cover" src="img/slider_bg.png" alt />
+            <horizontal-slider class="mb-8">
+                <template slot="big-slides">
+                    <div class="big-slide">
+                        <img src="img/about_img.png" alt="" />
+                        <div class="big-slide__text absolute bottom-8 right-0 rounded-xl text-alpen_blue max-sm:text-[.55rem] md:bottom-0">
+                            <div class="mb-8 text-2xl font-semibold">Собери Про̒спи-Скорую и получи шанс стать победителем конкурса</div>
+                            <div class="mb-[1.3em] text-[1.25em] leading-[1.1]">
+                                <p class="line-clamp-8">
+                                    Принимая во внимание показатели успешности, сплочённость команды профессионалов обеспечивает широкому кругу (специалистов) участие в формировании новых предложений
+                                </p>
+                            </div>
+                            <a class="text-[.9em] text-alpen_blue underline underline-offset-4 hover:no-underline" href="">Подробнее</a>
+                        </div>
+                    </div>
+                </template>
+                <template slot="small-slides">
+                    <div class="big-slide big-slide--min">
+                        <img class="h-full w-full object-contain" src="img/about_img.png" alt="" />
+                        <div class="big-slide__text absolute bottom-0 right-0 rounded-xl text-alpen_blue">
+                            <div class="text-xs font-semibold">Собери Про̒спи-Скорую и получи шанс стать победителем конкурса</div>
+                            <div class="mb-[1.3em] text-[0.55rem] leading-[1.1]">
+                                <p class="line-clamp-8">
+                                    Принимая во внимание показатели успешности, сплочённость команды профессионалов обеспечивает широкому кругу (специалистов) участие в формировании новых предложений
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </template>
+            </horizontal-slider>
+        </div>
+
+        <div class="container">
+            <a class="block w-full rounded-md bg-alpen_red py-3 text-center text-xl font-medium text-white hover:opacity-70 md:py-7 md:text-3xl" href>Смотреть все события</a>
+        </div>
+    </block>
+</extends>

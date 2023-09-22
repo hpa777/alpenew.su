@@ -1,0 +1,198 @@
+.sub-menu {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    &__link {
+        @apply text-gray-500 hover:text-black md:whitespace-nowrap;
+    }
+    &__li {
+        @apply relative before:absolute before:-left-4 before:top-3 before:block before:h-1 before:w-1 before:rounded-full before:bg-current;
+    }
+}
+
+.main-menu__item {
+    position: relative;
+    > a.active + .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        max-height: 100vh;
+    }
+    &:hover {
+        .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            max-height: 100vh;
+        }
+    }
+}
+
+.big-slide {
+    position: relative;
+    height: 100%;
+    &__text {
+        width: 21em;
+        //height: 28em;
+        padding: 2em 2.1em;
+        background: rgba(255, 255, 255, 0.7);
+        /*убрать*/
+        box-shadow: inset -5px -4px 15px rgba(0, 0, 0, 0.14);
+        backdrop-filter: blur(10px);
+    }
+    &--min {
+        height: 20rem;
+        padding: 0 1em;
+        .big-slide__text {
+            width: 8.2em;
+            height: 11em;
+            padding: 1em;
+        }
+    }
+    &--event {
+        .big-slide__text {
+            width: 17em;
+            height: 22.5em;
+            padding: 2.1em 1.4em;
+        }
+    }
+}
+.index-main-slider {
+    @apply w-[90vw] max-sm:mx-auto md:w-5/12;
+    .agile__actions {
+        justify-content: center !important;
+        gap: 2rem;
+    }
+}
+
+.index-preview-slider {
+    @apply hidden w-6/12 pb-28 md:block;
+    .agile__actions {
+        position: relative;
+        top: 4rem;
+        justify-content: center !important;
+        gap: 2rem;
+    }
+}
+.vertical-slider .index-main-slider {
+    @apply md:w-full;
+}
+.vertical-slider .index-preview-slider {
+    @apply px-8 pb-0 md:w-[29rem];
+    .agile__actions {
+        justify-content: space-between !important;
+        position: absolute;
+        left: -3rem;
+        top: 50%;
+        width: calc(100% + 6rem);
+        margin-top: -1.37rem;
+        height: 0;
+    }
+}
+
+/*убрать*/
+.prod-btn-gradient {
+    background: linear-gradient(271.28deg, #da251c 1.23%, rgba(218, 37, 28, 0.7) 99.06%);
+}
+
+.text {
+    @apply text-xl text-alpen_blue;
+    > p {
+        @apply pb-9;
+    }
+    ul {
+        @apply list-inside list-disc pb-9;
+    }
+    ol {
+        @apply list-inside list-decimal pb-9;
+    }
+    td {
+        @apply border border-slate-600 p-2;
+    }
+}
+.catalog {
+    @apply grid grid-cols-1 gap-8 lg:pt-32;
+}
+.catalog--line {
+    .catalog-item {
+        @apply flex h-[26.5rem] rounded-xl shadow-alpen transition-transform hover:scale-105;
+        &__img {
+            @apply w-1/3;
+        }
+        &__txt {
+            @apply relative w-2/3 pl-8 pr-16 pt-14;
+            p {
+                @apply line-clamp-5 text-xl;
+            }
+        }
+        &__title {
+            @apply mb-6;
+        }
+        &__btn {
+            @apply bottom-14 right-11 rounded-md bg-gradient-alpen px-14 py-5 text-2xl font-semibold text-white opacity-70 transition-opacity;
+        }
+        &:hover {
+            .catalog-item__btn {
+                @apply opacity-100;
+            }
+        }
+    }
+}
+
+.catalog--grid {
+    @apply md:grid-cols-2 lg:grid-cols-3;
+    .catalog-item {
+        @apply relative pb-12 transition-all lg:pb-24;
+        &__img {
+            @apply h-[28rem];
+        }
+        &__txt {
+            @apply absolute bottom-0 right-4 h-40 w-[62%] rounded-md px-8 py-7 shadow-alpen backdrop-blur-md transition-all;
+            p {
+                @apply line-clamp-8 leading-tight opacity-0;
+            }
+        }
+        &__title {
+            @apply mb-3;
+            span {
+                @apply block;
+            }
+        }
+        &__btn {
+            @apply bottom-8 left-8 inline-block text-sm underline opacity-0 transition-opacity;
+        }
+        &:hover {
+            @apply scale-105;
+            .catalog-item {
+                &__txt {
+                    @apply h-80;
+                    p {
+                        @apply opacity-100;
+                    }
+                }
+                &__btn {
+                    @apply opacity-100;
+                }
+            }
+        }
+    }
+}
+
+@layer components {    
+    .form {
+        @apply fixed left-0 top-0 z-10 hidden h-full w-full bg-slate-400/50 py-8;
+        &__label {
+            @apply mb-4 block text-xl;
+        }
+        &__input {
+            @apply h-16 w-full rounded-md border border-alpen_gray px-4 text-xl placeholder:italic placeholder:text-alpen_gray;
+        }
+        &__radio {
+            @apply cursor-pointer rounded-md bg-alpen_gray py-[1.12rem] text-center text-xl text-white hover:bg-alpen_red;
+        }
+        &__btn {
+            @apply rounded-md border border-alpen_gray bg-alpen_gray px-12 py-4 text-2xl font-semibold text-white hover:bg-alpen_red hover:bg-alpen_red disabled:bg-white disabled:text-alpen_gray;
+        }
+        &__close {
+            @apply absolute right-3 top-1 text-4xl text-alpen_blue;
+        }
+    }
+}

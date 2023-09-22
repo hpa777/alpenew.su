@@ -1,0 +1,15 @@
+<extends src="layout.html">
+    <block name="content">
+      <include src="breadcrumbs.html"> {"page":"События"} </include>
+  
+      <div class="container">
+        <div class="mb-16 text-5xl font-semibold text-alpen_blue">События</div>
+        
+        <form action="/" method="post" enctype="multipart/form-data">
+          <p><input type="file" accept="image/*;capture=camera"></p>
+          <p><button type="submit">Submit</button></p>
+        </form>
+      </div>
+    </block>
+  </extends>
+  

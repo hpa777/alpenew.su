@@ -1,0 +1,47 @@
+<extends src="layout.html">
+    <block name="content">
+        <include src="breadcrumbs.html"> {"page":"Партнёрство"} </include>
+
+        <div class="container">
+            <div class="mb-16 text-4xl font-semibold text-alpen_blue lg:text-5xl">Фармаконадзор</div>
+            <div class="text">
+                <p>
+                    Компания Альпен Фарма строго следит за безопасностью и качеством своих препаратов ради здоровья потребителей. В соответствии с этическими принципами и требованиями российского законодательства, компания
+                    организует сбор и анализ информации о любых побочных явлениях, а также осуществляет координацию с регуляторными органами в этой области
+                </p>
+                <div class="lg:flex">
+                    <div class="mb-10 lg:mb-0 lg:w-1/2">
+                        <h2 class="mb-12 text-3xl font-semibold text-alpen_blue lg:text-4xl">Качество препаратов</h2>
+                        <p class="mb-10">
+                            Чтобы проконсультироваться по вопросам качества лекарственных препаратов, оставить свой отзыв или поделиться опытом, пожалуйста, заполните анкету по качеству, либо позвоните по телефону горячей
+                            линии. Ваше обращение очень важно для нас.
+                        </p>
+                        <button data-formid="quality-form" class="h-20 w-full rounded-md bg-alpen_red text-center text-2xl font-semibold text-white hover:opacity-70 lg:w-auto lg:px-28">Заполнить анкету</button>
+                    </div>
+                    <div class="mb-10 lg:mb-0 lg:w-1/2">
+                        <h2 class="mb-12 text-3xl font-semibold text-alpen_blue lg:text-4xl">Нежелательные явления</h2>
+                        <p class="mb-10">
+                            Если Вы узнали о каких-либо негативных симптомах, возникших при приеме препаратов компании АЛЬПЕН ФАРМА, пожалуйста, заполните электронную форму, размещенную на сайте, или позвоните по телефону
+                            горячей линии.
+                        </p>
+                        <button data-formid="adverse-form" class="h-20 w-full rounded-md bg-alpen_red text-center text-2xl font-semibold text-white hover:opacity-70 lg:w-auto lg:px-28">Заполнить форму</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form" id="adverse-form">
+            <div class="relative m-auto h-[90%] max-h-[850px] w-[85rem] max-w-full rounded-md bg-white pt-12">
+                <button class="form__close">&times;</button>
+                <adverse-form></adverse-form>
+            </div>
+        </div>
+
+        <div class="form" id="quality-form">
+            <div class="relative m-auto h-[90%] max-h-[850px] w-[85rem] max-w-full rounded-md bg-white pt-12">
+                <button class="form__close">&times;</button>
+                <quality-form></quality-form>
+            </div>
+        </div>
+    </block>
+</extends>

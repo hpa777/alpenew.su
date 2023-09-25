@@ -26,6 +26,25 @@
     }
 }
 
+.index-video-cnt {
+    &::before ,&::after {
+        content: '';
+        display: block;
+        width: 100%;        
+        position: absolute;
+        top:-1px;
+        left: 0;
+    }
+    &::before {        
+        height: 101%;
+        background: radial-gradient(82.95% 80.12% at 66.58% 12.2%, rgba(233, 239, 244, 0.00) 0%, rgba(255, 255, 255, 0.75) 76.56%, #FFF 100%);
+    }
+    &::after {        
+        height: 6rem;        
+        background: 50% 0/100% no-repeat url(../img/video_top_bg.png);        
+    }
+}
+
 .big-slide {
     position: relative;
     height: 100%;
@@ -193,6 +212,68 @@
         }
         &__close {
             @apply absolute right-3 top-1 text-4xl text-alpen_blue;
+        }
+    }
+}
+
+.index-slide {
+    
+    @media (min-width:768px) {
+        width: 410px;
+        height: 516px;
+    }    
+    &__text {
+        opacity: 0;
+        transition: opacity .3s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 7.059px;
+        background: rgba(255, 255, 255, 0.70);
+        box-shadow: -3.52971px -2.82377px 10.58912px 0px rgba(0, 0, 0, 0.14) inset;
+        backdrop-filter: blur(7.059412479400635px);
+        padding: 3.3rem;
+    }
+}
+.theta-current-item:hover {
+    .index-slide__text {
+        opacity: 1;
+    }
+}
+.index-banner {
+    &__text {
+        flex: 0 0 40.6em;
+        padding-top: 8.6em;
+    }
+    &__image {
+        flex: 0 1 29.8em;
+        padding: 7em 0 0 6em;
+    }
+    &__title {
+        color: #1E2640;
+        font-family: Arial;
+        font-size: 5em;        
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 0.26em;        
+    }
+    &__block {
+        > div {
+            color: #E60003;            
+            font-size: 1.46675em;            
+            font-weight: 800;            
+            text-transform: uppercase;            
+            span {
+                font-size: 1.8em;
+            }
+        }
+        > p {            
+            font-size: 0.88006em;            
+            font-weight: 500;
+            line-height: 1.35175em;
+            text-transform: uppercase;
         }
     }
 }
